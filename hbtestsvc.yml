@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hbjavasc
+spec:
+  selector:
+    app: hbjavasc
+  ports:
+    - name: hbjavasc
+      protocol: TCP
+      port: 80
+      targetPort: 11130

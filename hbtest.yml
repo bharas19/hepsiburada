@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hbjavasc
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hbjavasc
+  template:
+    metadata:
+      labels:
+        app: hbjavasc
+    spec:
+      containers:
+        - name: hbjavasc
+          image: bharas19/hbjavasc:latest
+          ports:
+            - containerPort: 11130
